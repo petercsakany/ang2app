@@ -1,0 +1,9 @@
+<div class="row" style="text-align: center">
+  <h2 *ngIf="firstQuestion">{{firstQuestion.title}}</h2>
+  <div class="btn-group">
+  <div class="form-group" *ngFor="let answer of firstQuestion.answers">
+    <button type="button" class="btn-lg btn-primary">{{answer}}</button>
+    </div>
+  </div>
+</div>
+

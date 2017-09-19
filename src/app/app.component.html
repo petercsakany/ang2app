@@ -6,11 +6,11 @@
           <div class="navbar-header">
             <a class="navbar-brand" href="#">Quiz Game</a>
           </div>
-          <ul class="nav navbar-nav">
+          <!--<ul class="nav navbar-nav">
             <li><a href="#">Home</a></li>
             <li><a href="https://github.com/petercsakany/ang2app">Project Source</a></li>
-            <li><a href="https://opentdb.com">Quiz Api</a></li>
-          </ul>
+            <li><a href="https://opentdb.com">Quiz API</a></li>
+          </ul>-->
         </div>
       </nav>
     </div>
@@ -18,11 +18,12 @@
   <div class="row">
     <div class="col-md-12">
       <div style="text-align: center">
-        <h1>{{title}}</h1>
+        <h1>{{gameState.caption}}</h1>
       </div>
     </div>
   </div>
   <hr>
-  <app-quiz></app-quiz>
+  <app-quiz *ngIf="gameState.setup"></app-quiz>
+  <app-question *ngIf="gameState.start"></app-question>
 </div>
 

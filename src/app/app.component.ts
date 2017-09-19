@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {QuizService} from "./shared/quiz.service";
 
 @Component({
   selector: 'app-root',
@@ -7,10 +8,13 @@ import {Component, OnInit} from '@angular/core';
 })
 export class AppComponent implements OnInit{
 
-  title: string = 'Setup Game';
+  caption: string;
+  gameState: {caption: string, setup: boolean, start: boolean, finish: boolean};
 
-  constructor() {}
+  constructor(private quizService: QuizService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.gameState = this.quizService.getGameState();
+  }
 
 }

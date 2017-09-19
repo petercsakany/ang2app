@@ -6,11 +6,13 @@ import {FormsModule} from "@angular/forms";
 import {HttpModule} from "@angular/http";
 import { QuizComponent } from './quiz/quiz.component';
 import {QuizService} from "./shared/quiz.service";
+import { QuestionComponent } from './question/question.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    QuizComponent
+    QuizComponent,
+    QuestionComponent
   ],
   imports: [
     BrowserModule,

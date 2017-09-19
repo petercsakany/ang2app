@@ -3,25 +3,28 @@
   <div class="col-md-4" style="text-align: center">
     <div class="form-group">
       <label for="sel1">Select Category</label>
-      <select *ngIf="categories" class="form-control" id="sel1">
-        <option *ngFor="let cat of categories">{{cat.name}}</option>
+      <select *ngIf="categories" class="form-control" id="sel1" (change)="getCategoryId($event.target)" [disabled]="categorySelectDisabled">
+        <option *ngFor="let cat of categories" [value]="cat.id">{{cat.name}}</option>
       </select>
     </div>
     <div class="form-group">
+      <label for="sel2">I prefer questions from any category.</label>
+      <input type="checkbox" id="sel2" [checked]="anyCategory" (click)="anyCategoryClicked()">
+    </div>
+    <!--<div class="form-group">
       <label for="sel2">Select Difficulty</label>
       <select class="form-control" id="sel2">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
+        <option>Easy</option>
+        <option>Medium</option>
+        <option>Hard</option>
       </select>
+    </div>-->
+    <div class="form-group">
+      <label for="sel3">Number of Questions (Max. {{selectedCategoryMaxNum}})</label>
+      <input type="number" max="{{selectedCategoryMaxNum}}" class="form-control" id="sel3" [(ngModel)]="selectedCategoryMaxNum">
     </div>
     <div class="form-group">
-      <label for="sel3">Number of Questions (Max. 20)</label>
-      <input type="text" class="form-control" id="sel3">
-    </div>
-    <div>
-      <button type="button" class="btn btn-primary form-control" id="sel4" (click)="loadCategories()">Load</button>
+      <button type="button" class="btn btn-primary form-control" id="sel4" (click)="startQuiz()">Start Quiz</button>
     </div>
   </div>
   <div class="col-md-4"></div>
