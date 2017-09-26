@@ -1,9 +1,10 @@
-<div class="row" style="text-align: center">
-  <h2 *ngIf="firstQuestion">{{firstQuestion.title}}</h2>
-  <div class="btn-group">
-  <div class="form-group" *ngFor="let answer of firstQuestion.answers">
-    <button type="button" class="btn-lg btn-primary">{{answer}}</button>
-    </div>
+<div *ngIf="currentQuestion">
+  <h2 class="text-center">{{currentQuestion.title | decodeHtmlString}}</h2>
+  <hr>
+  <div class="list-group" *ngFor="let answer of currentQuestion.answers" >
+    <button class="list-group-item" style="text-align: center"><span class="text-success">{{answer | decodeHtmlString }}</span></button>
   </div>
 </div>
+<hr>
+<button class="btn btn-default" type="button" (click)="nextQuestion()">Next Question</button>
 

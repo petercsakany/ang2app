@@ -1,31 +1,26 @@
-<div class="row">
-  <div class="col-md-4"></div>
-  <div class="col-md-4" style="text-align: center">
-    <div class="form-group">
-      <label for="sel1">Select Category</label>
-      <select *ngIf="categories" class="form-control" id="sel1" (change)="getCategoryId($event.target)" [disabled]="categorySelectDisabled">
-        <option *ngFor="let cat of categories" [value]="cat.id">{{cat.name}}</option>
-      </select>
-    </div>
-    <div class="form-group">
-      <label for="sel2">I prefer questions from any category.</label>
-      <input type="checkbox" id="sel2" [checked]="anyCategory" (click)="anyCategoryClicked()">
-    </div>
-    <!--<div class="form-group">
-      <label for="sel2">Select Difficulty</label>
-      <select class="form-control" id="sel2">
-        <option>Easy</option>
-        <option>Medium</option>
-        <option>Hard</option>
-      </select>
-    </div>-->
-    <div class="form-group">
-      <label for="sel3">Number of Questions (Max. {{selectedCategoryMaxNum}})</label>
-      <input type="number" max="{{selectedCategoryMaxNum}}" class="form-control" id="sel3" [(ngModel)]="selectedCategoryMaxNum">
-    </div>
-    <div class="form-group">
-      <button type="button" class="btn btn-primary form-control" id="sel4" (click)="startQuiz()">Start Quiz</button>
-    </div>
-  </div>
-  <div class="col-md-4"></div>
-</div>
+
+<div class="alert alert-danger" *ngIf="numOfQtsError">Number of questions cannot be more than {{selectedCtgMaxQNum}}</div>
+    <form class="bootstrap-form-with-validation">
+      <div *ngIf="categories" class="form-group">
+        <label class="control-label" for="select">Select Category</label>
+        <select id="select" class="form-control" (change)="getCategoryId($event.target)" [disabled]="categorySelectDisabled">
+          <optgroup label="This is a group">
+            <option *ngFor="let cat of categories" [value]="cat.id">{{cat.name}}</option>
+          </optgroup>
+        </select>
+        <label class="control-label" for="select">Max number of Questions: {{selectedCtgMaxQNum}}</label>
+      </div>
+      <div class="form-group">
+        <div class="checkbox">
+          <label class="control-label">
+            <input type="checkbox" [checked]="anyCategory" (click)="anyCategoryClicked()">Give me questions from any of the categories.</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="number-input">Number of Questions</label>
+        <input id="number-input" name="number-input" class="form-control" type="number" max="{{selectedCtgMaxQNum}}" [(ngModel)]="numOfQts">
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="button" (click)="startQuiz()">Start Quiz</button>
+      </div>
+    </form>

@@ -9,17 +9,23 @@ import {Question} from "../shared/question.model";
 })
 export class QuestionComponent implements OnInit {
   questions: Array<Question>;
-  firstQuestion: Question;
+  currentQuestion: Question;
+  currentQuestionIndex: number = 0;
 
   constructor(private quizService: QuizService) {
     quizService.fetchQuestions().subscribe(
       res => this.questions = res,
       (error)=>{console.log(error)},
-      ()=>{this.firstQuestion = this.questions[0]});
+      ()=>{
+        this.currentQuestion = this.questions[this.currentQuestionIndex];
+      });
   }
 
-  show(){
-    console.log(this.questions);
+  nextQuestion() {
+    if(this.currentQuestionIndex < this.questions.length - 1){
+      this.currentQuestionIndex ++;
+      this.currentQuestion = this.questions[this.currentQuestionIndex];
+    }
   }
 
   ngOnInit() {

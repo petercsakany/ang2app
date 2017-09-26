@@ -8,7 +8,6 @@ import {QuizService} from "./shared/quiz.service";
 })
 export class AppComponent implements OnInit{
 
-  caption: string;
   gameState: {caption: string, setup: boolean, start: boolean, finish: boolean};
 
   constructor(private quizService: QuizService) {}
