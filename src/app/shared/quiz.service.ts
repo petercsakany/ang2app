@@ -7,6 +7,18 @@ import {Question} from "./question.model";
 @Injectable()
 export class QuizService {
 
+  get numOfQuestions(): number {
+    return this._numOfQuestions;
+  }
+
+  get score(): number {
+    return this._score;
+  }
+
+  set score(value: number) {
+    this._score = value;
+  }
+
   constructor(private http: Http) {}
 
   private gameState = {
@@ -17,6 +29,10 @@ export class QuizService {
   };
 
   private queryUrl: string;
+
+  private _score: number = 0;
+
+  private _numOfQuestions: number;
 
   updateUrl(url): void {
     this.queryUrl = url;
@@ -56,10 +72,11 @@ export class QuizService {
         let questions = data.results;
         let result: Array<Question> = [];
         if (questions) {
+          this._numOfQuestions = questions.length;
           questions.forEach((qst) => {
             let question = new Question(qst.question,qst.incorrect_answers,qst.correct_answer);
             question.answers.push(question.correctAnswer);
-            question.answers = this.shuffleAnswers(question.answers);
+            question.answers = QuizService.shuffleAnswers(question.answers);
             result.push(question);
           });
         }
@@ -75,7 +92,7 @@ export class QuizService {
       });
   }
 
-  shuffleAnswers(answers: Array<string>): Array<string>{
+  static shuffleAnswers(answers: Array<string>): Array<string>{
     for (let i = answers.length - 1; i > 0; i--) {
       let j = Math.floor(Math.random() * (i + 1));
       let temp = answers[i];

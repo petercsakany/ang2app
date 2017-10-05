@@ -2,7 +2,7 @@
   <h2 class="text-center">{{currentQuestion.title | decodeHtmlString}}</h2>
   <hr>
   <div class="list-group" *ngFor="let answer of currentQuestion.answers" >
-    <button class="list-group-item" style="text-align: center"><span class="text-success">{{answer | decodeHtmlString }}</span></button>
+    <button class="list-group-item" style="text-align: center" #ans (click)="checkAnswer($event)">{{answer | decodeHtmlString }}</button>
   </div>
 </div>
 <hr>

@@ -53,7 +53,7 @@ export class QuizComponent implements OnInit {
 
   startQuiz() {
 
-    if(this.numOfQts > this.selectedCtgMaxQNum) {
+    if(this.numOfQts > this.selectedCtgMaxQNum || this.numOfQts <= 0) {
       this.numOfQtsError = true;
     }
     else {

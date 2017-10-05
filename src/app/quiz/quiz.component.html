@@ -1,5 +1,5 @@
 
-<div class="alert alert-danger" *ngIf="numOfQtsError">Number of questions cannot be more than {{selectedCtgMaxQNum}}</div>
+<div class="alert alert-danger" *ngIf="numOfQtsError">Number of questions cannot be less than 1 or more than {{selectedCtgMaxQNum}}</div>
     <form class="bootstrap-form-with-validation">
       <div *ngIf="categories" class="form-group">
         <label class="control-label" for="select">Select Category</label>

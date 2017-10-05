@@ -8,13 +8,15 @@ import { QuizComponent } from './quiz/quiz.component';
 import {QuizService} from "./shared/quiz.service";
 import { QuestionComponent } from './question/question.component';
 import { DecodeHtmlStringPipe } from './shared/decode-html-string.pipe';
+import { ResultComponent } from './result/result.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     QuizComponent,
     QuestionComponent,
-    DecodeHtmlStringPipe
+    DecodeHtmlStringPipe,
+    ResultComponent,
   ],
   imports: [
     BrowserModule,
