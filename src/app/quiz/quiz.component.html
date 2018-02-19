@@ -1,23 +1,18 @@
 
-<div class="alert alert-danger" *ngIf="numOfQtsError">Number of questions cannot be less than 1 or more than {{selectedCtgMaxQNum}}</div>
+<div class="alert alert-danger" *ngIf="ErrorMsg">{{ErrorMsg}}</div>
     <form class="bootstrap-form-with-validation">
       <div *ngIf="categories" class="form-group">
         <label class="control-label" for="select">Select Category</label>
         <select id="select" class="form-control" (change)="getCategoryId($event.target)" [disabled]="categorySelectDisabled">
-          <optgroup label="This is a group">
+          <optgroup>
+            <option value="-1">No Specific Category</option>
             <option *ngFor="let cat of categories" [value]="cat.id">{{cat.name}}</option>
           </optgroup>
         </select>
-        <label class="control-label" for="select">Max number of Questions: {{selectedCtgMaxQNum}}</label>
+        <label class="control-label" for="select">Total number of Questions: {{selectedCtgTotQNum}}</label>
       </div>
       <div class="form-group">
-        <div class="checkbox">
-          <label class="control-label">
-            <input type="checkbox" [checked]="anyCategory" (click)="anyCategoryClicked()">Give me questions from any of the categories.</label>
-        </div>
-      </div>
-      <div class="form-group">
-        <label class="control-label" for="number-input">Number of Questions</label>
+        <label class="control-label" for="number-input">Number of Questions (Limit: {{selectedCtgMaxQNum}})</label>
         <input id="number-input" name="number-input" class="form-control" type="number" max="{{selectedCtgMaxQNum}}" [(ngModel)]="numOfQts">
       </div>
       <div class="form-group">

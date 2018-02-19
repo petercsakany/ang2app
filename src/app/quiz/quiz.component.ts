@@ -13,39 +13,65 @@ export class QuizComponent implements OnInit {
   categories: Array<Category>;
   numOfQts: number = 50;
   numOfQtsInCtgs: any = {};
+  totQNum: number = 0;
   selectedCtgId: number = 0;
   selectedCtgMaxQNum: number = 50;
+  selectedCtgTotQNum: number = 0;
   prevCtgQMaxNum: number = 0;
+  prevCtgTotQNum: number = 0;
 
   //form elements attributes
   categorySelectDisabled: boolean = false;
-  anyCategory: boolean = false;
-  numOfQtsError: boolean = false;
+  anyCategory: boolean = true;
+  ErrorMsg: string = '';
 
   constructor(private  quizService: QuizService) {
-    quizService.fetchCategories().subscribe(res => this.categories = res);
-    quizService.fetchNumOfQuestions().subscribe(res => this.numOfQtsInCtgs = res);
+    quizService.fetchCategories().subscribe(
+      res => this.categories = res,
+      (error)=>{
+        this.ErrorMsg = "An error occurred: " + error;
+      }
+    );
+    quizService.fetchNumOfQuestions().subscribe(
+      res => this.numOfQtsInCtgs = res,
+      (error)=>{
+        this.ErrorMsg = "An error occurred: " + error;
+      },
+      ()=>{
+        this.totQNum = this.numOfQtsInCtgs.overall.total_num_of_verified_questions;
+        this.selectedCtgTotQNum = this.totQNum;
+      }
+    );
   }
 
   getCategoryId(selectedCategory) {
     this.selectedCtgId = selectedCategory.value;
+    if (this.selectedCtgId == -1) {
+      this.anyCategory = true;
+      this.selectedCtgTotQNum = this.totQNum;
+      this.selectedCtgMaxQNum = 50;
+      this.numOfQts = this.selectedCtgMaxQNum;
+      this.ErrorMsg = null;
+    }
+
     let obj = this.numOfQtsInCtgs.categories;
     for (let prop in obj) {
-      if (prop === selectedCategory.value.toString() && obj[prop].total_num_of_questions < 50) {
-        this.selectedCtgMaxQNum = obj[prop].total_num_of_questions;
+      if (prop === selectedCategory.value.toString()) {
+        this.selectedCtgTotQNum = obj[prop].total_num_of_verified_questions;
+        if(this.selectedCtgTotQNum >= 50) {
+          this.selectedCtgMaxQNum = 50;
+          this.numOfQts = this.selectedCtgMaxQNum;
+        }
+        else {
+          this.selectedCtgMaxQNum = this.selectedCtgTotQNum;
+          this.numOfQts = this.selectedCtgMaxQNum;
+        }
+        this.prevCtgQMaxNum = this.selectedCtgMaxQNum;
+        this.prevCtgTotQNum = this.selectedCtgTotQNum;
+        this.anyCategory = false;
       }
     }
-  }
-
-  anyCategoryClicked() {
-    this.categorySelectDisabled = !this.categorySelectDisabled;
-    if(!this.categorySelectDisabled){
-      this.selectedCtgMaxQNum = this.prevCtgQMaxNum;
-    }
-    else {
-      this.prevCtgQMaxNum = this.selectedCtgMaxQNum;
-      this.selectedCtgMaxQNum = 50;
-    }
+    this.ErrorMsg = null;
   }
 
   ngOnInit() {
@@ -54,7 +80,7 @@ export class QuizComponent implements OnInit {
   startQuiz() {
 
     if(this.numOfQts > this.selectedCtgMaxQNum || this.numOfQts <= 0) {
-      this.numOfQtsError = true;
+      this.ErrorMsg = "Number of questions cannot be less than 1 or more than the given limit!";
     }
     else {
 
@@ -65,9 +91,10 @@ export class QuizComponent implements OnInit {
       }
 
       this.quizService.updateUrl(url);
-      this.numOfQtsError = false;
 
       this.quizService.updateGameState('Quiz',false,true,false);
+
+      this.ErrorMsg = null;
     }
   }
 
