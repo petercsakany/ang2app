@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
-import {Http} from "@angular/http";
+import {Http} from '@angular/http';
 import 'rxjs/add/operator/map';
-import {Category} from "./category.model";
-import {Question} from "./question.model";
+import {Category} from './category.model';
+import {Question} from './question.model';
 
 @Injectable()
 export class QuizService {
@@ -30,9 +30,20 @@ export class QuizService {
 
   private queryUrl: string;
 
-  private _score: number = 0;
+  private _score: number;
 
   private _numOfQuestions: number;
+
+  static shuffleAnswers(answers: Array<string>): Array<string> {
+    for (let i = answers.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const temp = answers[i];
+      answers[i] = answers[j];
+      answers[j] = temp;
+    }
+    return answers;
+  }
+
 
   updateUrl(url): void {
     this.queryUrl = url;
@@ -42,7 +53,7 @@ export class QuizService {
     return this.gameState;
   }
 
-  updateGameState(caption: string, setup: boolean,start: boolean, finish: boolean): void {
+  updateGameState(caption: string, setup: boolean, start: boolean, finish: boolean): void {
     this.gameState.caption = caption;
     this.gameState.setup = setup;
     this.gameState.start = start;
@@ -52,13 +63,13 @@ export class QuizService {
   fetchCategories() {
     return this.http.get('https://opentdb.com/api_category.php')
       .map( (res) => res.json())
-      .map(data =>{
-        let categories = data.trivia_categories;
-        let result: Array<Category> = [];
+      .map(data => {
+        const categories = data.trivia_categories;
+        const result: Array<Category> = [];
         if (categories) {
           categories.forEach((cat) => {
             result.push(
-              new Category(cat.id,cat.name));
+              new Category(cat.id, cat.name));
           });
         }
         return result;
@@ -68,38 +79,28 @@ export class QuizService {
   fetchQuestions() {
     return this.http.get(this.queryUrl)
       .map( (res) => res.json())
-      .map(data =>{
-        let questions = data.results;
-        let result: Array<Question> = [];
+      .map(data => {
+        const questions = data.results;
+        const result: Array<Question> = [];
         if (questions) {
           this._numOfQuestions = questions.length;
           questions.forEach((qst) => {
-            let question = new Question(qst.question,qst.incorrect_answers,qst.correct_answer);
+            const question = new Question(qst.question, qst.incorrect_answers, qst.correct_answer);
             question.answers.push(question.correctAnswer);
             question.answers = QuizService.shuffleAnswers(question.answers);
             result.push(question);
           });
         }
         return result;
-      });
+      }) ;
   }
 
   fetchNumOfQuestions() {
     return this.http.get('https://opentdb.com/api_count_global.php')
       .map( (res) => res.json())
-      .map(data =>{
+      .map(data => {
         return data;
       });
-  }
-
-  static shuffleAnswers(answers: Array<string>): Array<string>{
-    for (let i = answers.length - 1; i > 0; i--) {
-      let j = Math.floor(Math.random() * (i + 1));
-      let temp = answers[i];
-      answers[i] = answers[j];
-      answers[j] = temp;
-    }
-    return answers;
   }
 
 }
