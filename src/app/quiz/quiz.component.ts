@@ -54,8 +54,8 @@ export class QuizComponent implements OnInit {
       this.ErrorMsg = null;
     } else if (selectedCategory.value === '666') {
       this.anyCategory = false;
-      this.selectedCtgTotQNum = 9;
-      this.selectedCtgMaxQNum = 9;
+      this.selectedCtgTotQNum = 35;
+      this.selectedCtgMaxQNum = 35;
       this.numOfQts = this.selectedCtgMaxQNum;
       this.ErrorMsg = null;
     } else {
@@ -87,7 +87,7 @@ export class QuizComponent implements OnInit {
     if (this.numOfQts > this.selectedCtgMaxQNum || this.numOfQts <= 0) {
       this.ErrorMsg = 'Number of questions cannot be less than 1 or more than the given limit!';
     } else {
-      let url = 'https://api.myjson.com/bins/10fiqm';
+      let url = 'https://api.myjson.com/bins/11v72u';
       if (this.selectedCtgId < 666) {
         url = 'https://opentdb.com/api.php?';
         url += `amount=${this.numOfQts}`;
