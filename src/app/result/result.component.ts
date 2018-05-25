@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {QuizService} from "../shared/quiz.service";
+import {QuizService} from '../shared/quiz.service';
 
 @Component({
   selector: 'app-result',
@@ -9,7 +9,7 @@ import {QuizService} from "../shared/quiz.service";
 export class ResultComponent implements OnInit {
 
   numOfQuestions: number;
-  score: number = 0;
+  score = 0;
 
   constructor(private quizService: QuizService) {
     this.numOfQuestions = this.quizService.numOfQuestions;

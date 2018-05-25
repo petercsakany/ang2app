@@ -1,8 +1,14 @@
 <div *ngIf="currentQuestion">
-  <h2 class="text-center">{{currentQuestion.title | decodeHtmlString}}</h2>
+  <h2 class="text-center">{{currentQuestionIndex + 1}}.{{currentQuestion.title | decodeHtmlString}}</h2>
   <hr>
   <div class="list-group" *ngFor="let answer of currentQuestion.answers" >
     <button class="list-group-item" style="text-align: center" #ans (click)="checkAnswer($event)">{{answer | decodeHtmlString }}</button>
+  </div>
+  <hr>
+  <div class="progress">
+    <div class="progress-bar progress-bar-success" role="progressbar" [attr.aria-valuenow]="progress" aria-valuemin="0" aria-valuemax="100" style="min-width: 2em;" [style.width]="progress + '%'" >
+      {{progress}} %
+    </div>
   </div>
 </div>
 <hr>

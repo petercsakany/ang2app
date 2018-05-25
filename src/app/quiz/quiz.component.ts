@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {QuizService} from "../shared/quiz.service";
-import {Category} from "../shared/category.model";
+import {QuizService} from '../shared/quiz.service';
+import {Category} from '../shared/category.model';
 
 @Component({
   selector: 'app-quiz',
@@ -9,35 +9,35 @@ import {Category} from "../shared/category.model";
 })
 export class QuizComponent implements OnInit {
 
-  //quiz arrays and attributes
+  /*quiz arrays and attributes*/
   categories: Array<Category>;
-  numOfQts: number = 50;
+  numOfQts = 50;
   numOfQtsInCtgs: any = {};
-  totQNum: number = 0;
-  selectedCtgId: number = 0;
-  selectedCtgMaxQNum: number = 50;
-  selectedCtgTotQNum: number = 0;
-  prevCtgQMaxNum: number = 0;
-  prevCtgTotQNum: number = 0;
+  totQNum = 0;
+  selectedCtgId = 0;
+  selectedCtgMaxQNum = 50;
+  selectedCtgTotQNum = 0;
+  prevCtgQMaxNum = 0;
+  prevCtgTotQNum = 0;
 
-  //form elements attributes
-  categorySelectDisabled: boolean = false;
-  anyCategory: boolean = true;
-  ErrorMsg: string = '';
+  /*form elements attributes*/
+  categorySelectDisabled = false;
+  anyCategory = true;
+  ErrorMsg = '';
 
   constructor(private  quizService: QuizService) {
     quizService.fetchCategories().subscribe(
       res => this.categories = res,
-      (error)=>{
-        this.ErrorMsg = "An error occurred: " + error;
+      (error) => {
+        this.ErrorMsg = 'An error occurred: ' + error;
       }
     );
     quizService.fetchNumOfQuestions().subscribe(
       res => this.numOfQtsInCtgs = res,
-      (error)=>{
-        this.ErrorMsg = "An error occurred: " + error;
+      (error) => {
+        this.ErrorMsg = 'An error occurred: ' + error;
       },
-      ()=>{
+      () => {
         this.totQNum = this.numOfQtsInCtgs.overall.total_num_of_verified_questions;
         this.selectedCtgTotQNum = this.totQNum;
       }
@@ -46,7 +46,7 @@ export class QuizComponent implements OnInit {
 
   getCategoryId(selectedCategory) {
     this.selectedCtgId = selectedCategory.value;
-    if (this.selectedCtgId == -1) {
+    if (this.selectedCtgId === -1) {
       this.anyCategory = true;
       this.selectedCtgTotQNum = this.totQNum;
       this.selectedCtgMaxQNum = 50;
@@ -54,15 +54,14 @@ export class QuizComponent implements OnInit {
       this.ErrorMsg = null;
     }
 
-    let obj = this.numOfQtsInCtgs.categories;
-    for (let prop in obj) {
+    const obj = this.numOfQtsInCtgs.categories;
+    for (const prop in obj) {
       if (prop === selectedCategory.value.toString()) {
         this.selectedCtgTotQNum = obj[prop].total_num_of_verified_questions;
-        if(this.selectedCtgTotQNum >= 50) {
+        if (this.selectedCtgTotQNum >= 50) {
           this.selectedCtgMaxQNum = 50;
           this.numOfQts = this.selectedCtgMaxQNum;
-        }
-        else {
+        } else {
           this.selectedCtgMaxQNum = this.selectedCtgTotQNum;
           this.numOfQts = this.selectedCtgMaxQNum;
         }
@@ -79,20 +78,19 @@ export class QuizComponent implements OnInit {
 
   startQuiz() {
 
-    if(this.numOfQts > this.selectedCtgMaxQNum || this.numOfQts <= 0) {
-      this.ErrorMsg = "Number of questions cannot be less than 1 or more than the given limit!";
-    }
-    else {
+    if (this.numOfQts > this.selectedCtgMaxQNum || this.numOfQts <= 0) {
+      this.ErrorMsg = 'Number of questions cannot be less than 1 or more than the given limit!';
+    } else {
 
       let url = 'https://opentdb.com/api.php?';
       url += `amount=${this.numOfQts}`;
-      if(this.selectedCtgId && !this.anyCategory){
+      if (this.selectedCtgId && !this.anyCategory) {
         url += `&category=${this.selectedCtgId}`;
       }
 
       this.quizService.updateUrl(url);
 
-      this.quizService.updateGameState('Quiz',false,true,false);
+      this.quizService.updateGameState('Quiz', false, true, false);
 
       this.ErrorMsg = null;
     }

@@ -1,6 +1,6 @@
 import {Component, OnInit, QueryList, Renderer2, ViewChildren} from '@angular/core';
-import {QuizService} from "../shared/quiz.service";
-import {Question} from "../shared/question.model";
+import {QuizService} from '../shared/quiz.service';
+import {Question} from '../shared/question.model';
 
 @Component({
   selector: 'app-question',
@@ -9,29 +9,32 @@ import {Question} from "../shared/question.model";
 })
 export class QuestionComponent implements OnInit {
   questions: Array<Question>;
+  progress: number;
   currentQuestion: Question;
-  currentQuestionIndex: number = 0;
-  currentScore: number = 0;
-  answerGiven: boolean = false;
+  currentQuestionIndex = 0;
+  currentScore = 0;
+  answerGiven = false;
 
-  @ViewChildren('ans') answers:QueryList<any>;
+  @ViewChildren('ans') answers: QueryList<any>;
 
   constructor(private quizService: QuizService, private renderer: Renderer2) {
     quizService.fetchQuestions().subscribe(
       res => this.questions = res,
-      (error)=>{console.log(error)},
-      ()=>{
+      (error) => {console.log(error); },
+      () => {
         this.currentQuestion = this.questions[this.currentQuestionIndex];
+        this.quizService.score = 0;
+        this.progress = Math.round(((this.currentQuestionIndex + 1 ) * 100) / this.questions.length);
       });
   }
 
   nextQuestion() {
-    if(this.currentQuestionIndex < this.questions.length - 1){
+    if (this.currentQuestionIndex < this.questions.length - 1) {
       this.currentQuestionIndex ++;
+      this.progress = Math.round(((this.currentQuestionIndex + 1 ) * 100) / this.questions.length);
       this.currentQuestion = this.questions[this.currentQuestionIndex];
-    }
-    else {
-      this.quizService.updateGameState('Results',false,false,true);
+    } else {
+      this.quizService.updateGameState('Results', false, false, true);
     }
   }
 
@@ -44,8 +47,7 @@ export class QuestionComponent implements OnInit {
       this.currentScore ++;
       this.answerGiven = true;
       this.quizService.score = this.currentScore;
-    }
-    else {
+    } else {
       this.renderer.addClass(event.target, 'list-group-item-danger');
       this.answerGiven = true;
     }

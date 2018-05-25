@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class DecodeHtmlStringPipe implements PipeTransform {
 
   transform(value: string, args?: any): string {
-    const tempElement = document.createElement("div");
+    const tempElement = document.createElement('div');
     tempElement.innerHTML = value;
     return tempElement.innerText;
   }
