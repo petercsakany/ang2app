@@ -44,6 +44,15 @@ export class QuizService {
     return answers;
   }
 
+  static shuffleQuestions(questions: Array<Question>): Array<Question> {
+    for (let i = questions.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const temp = questions[i];
+      questions[i] = questions[j];
+      questions[j] = temp;
+    }
+    return questions;
+  }
 
   updateUrl(url): void {
     this.queryUrl = url;

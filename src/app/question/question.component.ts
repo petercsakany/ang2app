@@ -14,6 +14,7 @@ export class QuestionComponent implements OnInit {
   currentQuestionIndex = 0;
   currentScore = 0;
   answerGiven = false;
+  correctAnswer = '';
 
   @ViewChildren('ans') answers: QueryList<any>;
 
@@ -22,7 +23,9 @@ export class QuestionComponent implements OnInit {
       res => this.questions = res,
       (error) => {console.log(error); },
       () => {
+        this.questions = QuizService.shuffleQuestions(this.questions);
         this.currentQuestion = this.questions[this.currentQuestionIndex];
+        this.correctAnswer = this.currentQuestion.correctAnswer;
         this.quizService.score = 0;
         this.progress = Math.round(((this.currentQuestionIndex + 1 ) * 100) / this.questions.length);
       });
@@ -33,6 +36,7 @@ export class QuestionComponent implements OnInit {
       this.currentQuestionIndex ++;
       this.progress = Math.round(((this.currentQuestionIndex + 1 ) * 100) / this.questions.length);
       this.currentQuestion = this.questions[this.currentQuestionIndex];
+      this.correctAnswer = this.currentQuestion.correctAnswer;
     } else {
       this.quizService.updateGameState('Results', false, false, true);
     }
@@ -42,7 +46,7 @@ export class QuestionComponent implements OnInit {
   }
 
   checkAnswer(event) {
-    if (event.target.textContent === this.currentQuestion.correctAnswer) {
+    if (event.target.textContent === this.correctAnswer) {
       this.renderer.addClass(event.target, 'list-group-item-success');
       this.currentScore ++;
       this.answerGiven = true;
@@ -54,12 +58,13 @@ export class QuestionComponent implements OnInit {
 
     if (this.answerGiven) {
       this.answers.forEach(answer => {
-        if (answer.nativeElement.textContent === this.currentQuestion.correctAnswer) {
+        if (answer.nativeElement.textContent === this.correctAnswer) {
           this.renderer.addClass(answer.nativeElement, 'list-group-item-success');
         }
         answer.nativeElement.disabled = true;
       });
     }
+    this.correctAnswer = '';
   }
 
 }

@@ -46,31 +46,37 @@ export class QuizComponent implements OnInit {
 
   getCategoryId(selectedCategory) {
     this.selectedCtgId = selectedCategory.value;
-    if (this.selectedCtgId === -1) {
+    if (selectedCategory.value === '-1') {
       this.anyCategory = true;
       this.selectedCtgTotQNum = this.totQNum;
       this.selectedCtgMaxQNum = 50;
       this.numOfQts = this.selectedCtgMaxQNum;
       this.ErrorMsg = null;
-    }
-
-    const obj = this.numOfQtsInCtgs.categories;
-    for (const prop in obj) {
-      if (prop === selectedCategory.value.toString()) {
-        this.selectedCtgTotQNum = obj[prop].total_num_of_verified_questions;
-        if (this.selectedCtgTotQNum >= 50) {
-          this.selectedCtgMaxQNum = 50;
-          this.numOfQts = this.selectedCtgMaxQNum;
-        } else {
-          this.selectedCtgMaxQNum = this.selectedCtgTotQNum;
-          this.numOfQts = this.selectedCtgMaxQNum;
+    } else if (selectedCategory.value === '666') {
+      this.anyCategory = false;
+      this.selectedCtgTotQNum = 9;
+      this.selectedCtgMaxQNum = 9;
+      this.numOfQts = this.selectedCtgMaxQNum;
+      this.ErrorMsg = null;
+    } else {
+      const obj = this.numOfQtsInCtgs.categories;
+      for (const prop in obj) {
+        if (prop === selectedCategory.value.toString()) {
+          this.selectedCtgTotQNum = obj[prop].total_num_of_verified_questions;
+          if (this.selectedCtgTotQNum >= 50) {
+            this.selectedCtgMaxQNum = 50;
+            this.numOfQts = this.selectedCtgMaxQNum;
+          } else {
+            this.selectedCtgMaxQNum = this.selectedCtgTotQNum;
+            this.numOfQts = this.selectedCtgMaxQNum;
+          }
+          this.prevCtgQMaxNum = this.selectedCtgMaxQNum;
+          this.prevCtgTotQNum = this.selectedCtgTotQNum;
+          this.anyCategory = false;
         }
-        this.prevCtgQMaxNum = this.selectedCtgMaxQNum;
-        this.prevCtgTotQNum = this.selectedCtgTotQNum;
-        this.anyCategory = false;
       }
+      this.ErrorMsg = null;
     }
-    this.ErrorMsg = null;
   }
 
   ngOnInit() {
@@ -81,13 +87,14 @@ export class QuizComponent implements OnInit {
     if (this.numOfQts > this.selectedCtgMaxQNum || this.numOfQts <= 0) {
       this.ErrorMsg = 'Number of questions cannot be less than 1 or more than the given limit!';
     } else {
-
-      let url = 'https://opentdb.com/api.php?';
-      url += `amount=${this.numOfQts}`;
-      if (this.selectedCtgId && !this.anyCategory) {
-        url += `&category=${this.selectedCtgId}`;
+      let url = 'https://api.myjson.com/bins/10fiqm';
+      if (this.selectedCtgId < 666) {
+        url = 'https://opentdb.com/api.php?';
+        url += `amount=${this.numOfQts}`;
+        if (this.selectedCtgId && !this.anyCategory) {
+          url += `&category=${this.selectedCtgId}`;
+        }
       }
-
       this.quizService.updateUrl(url);
 
       this.quizService.updateGameState('Quiz', false, true, false);
