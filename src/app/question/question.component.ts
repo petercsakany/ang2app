@@ -13,7 +13,6 @@ export class QuestionComponent implements OnInit {
   currentQuestion: Question;
   currentQuestionIndex = 0;
   currentScore = 0;
-  answerGiven = false;
   correctAnswer = '';
 
   @ViewChildren('ans') answers: QueryList<any>;
@@ -23,7 +22,7 @@ export class QuestionComponent implements OnInit {
       res => this.questions = res,
       (error) => {console.log(error); },
       () => {
-        this.questions = QuizService.shuffleQuestions(this.questions);
+        /*this.questions = QuizService.shuffleQuestions(this.questions);*/
         this.currentQuestion = this.questions[this.currentQuestionIndex];
         this.correctAnswer = this.currentQuestion.correctAnswer;
         this.quizService.score = 0;
@@ -37,6 +36,10 @@ export class QuestionComponent implements OnInit {
       this.progress = Math.round(((this.currentQuestionIndex + 1 ) * 100) / this.questions.length);
       this.currentQuestion = this.questions[this.currentQuestionIndex];
       this.correctAnswer = this.currentQuestion.correctAnswer;
+      this.answers.forEach(answer => {
+        this.renderer.removeClass(answer.nativeElement, 'list-group-item-success');
+        answer.nativeElement.disabled = false;
+      });
     } else {
       this.quizService.updateGameState('Results', false, false, true);
     }
@@ -49,22 +52,16 @@ export class QuestionComponent implements OnInit {
     if (event.target.textContent === this.correctAnswer) {
       this.renderer.addClass(event.target, 'list-group-item-success');
       this.currentScore ++;
-      this.answerGiven = true;
       this.quizService.score = this.currentScore;
     } else {
       this.renderer.addClass(event.target, 'list-group-item-danger');
-      this.answerGiven = true;
     }
-
-    if (this.answerGiven) {
-      this.answers.forEach(answer => {
-        if (answer.nativeElement.textContent === this.correctAnswer) {
-          this.renderer.addClass(answer.nativeElement, 'list-group-item-success');
-        }
-        answer.nativeElement.disabled = true;
-      });
-    }
+    this.answers.forEach(answer => {
+      if (answer.nativeElement.textContent === this.correctAnswer) {
+        this.renderer.addClass(answer.nativeElement, 'list-group-item-success');
+      }
+      answer.nativeElement.disabled = true;
+    });
     this.correctAnswer = '';
   }
-
 }
