@@ -22,7 +22,7 @@ export class QuestionComponent implements OnInit {
       res => this.questions = res,
       (error) => {console.log(error); },
       () => {
-        /*this.questions = QuizService.shuffleQuestions(this.questions);*/
+        this.questions = QuizService.shuffleQuestions(this.questions);
         this.currentQuestion = this.questions[this.currentQuestionIndex];
         this.correctAnswer = this.currentQuestion.correctAnswer;
         this.quizService.score = 0;
