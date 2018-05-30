@@ -87,7 +87,7 @@ export class QuizComponent implements OnInit {
     if (this.numOfQts > this.selectedCtgMaxQNum || this.numOfQts <= 0) {
       this.ErrorMsg = 'Number of questions cannot be less than 1 or more than the given limit!';
     } else {
-      let url = 'https://api.myjson.com/bins/hc0qm';
+      let url = 'assets/mcd2.json';
       if (this.selectedCtgId < 666) {
         url = 'https://opentdb.com/api.php?';
         url += `amount=${this.numOfQts}`;
