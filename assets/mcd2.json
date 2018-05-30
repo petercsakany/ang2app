@@ -1,0 +1,305 @@
+{
+	"response_code": 0,
+	"results": [
+    {
+      "category": "McDonald's",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What is the quality of oil when EBRO level is between 0-19%",
+      "correct_answer": "Good quality (green light)",
+      "incorrect_answers": [
+        "Bad quality (blue light)",
+        "Wrong quality (red light)",
+        "Bad quality (amber light, oil change advised)"
+      ]
+    },
+    {
+      "category": "McDonald's",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What is the quality of oil when EBRO level is between 20-24%",
+      "correct_answer": "Bad quality (amber light, oil change advised)",
+      "incorrect_answers": [
+        "Good quality (green light)",
+        "Bad quality (red light)",
+        "Good quality (no light, no need to change oil)"
+      ]
+    },
+    {
+      "category": "McDonald's",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What is the quality of oil when EBRO level is more than 24%",
+      "correct_answer": "Very bad quality (red light, oil change asap)",
+      "incorrect_answers": [
+        "Bad quality (amber light, oil change advised)",
+        "Good quality (yellow light)",
+        "Bad quality (red light, oil change in a week)"
+      ]
+    },
+    {
+      "category": "McDonald's",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What is the tempering of grill chicken?",
+      "correct_answer": "24 hours defrost in chiller then 72 hours.",
+      "incorrect_answers": [
+        "24 hours defrost in chiller then 24 hours.",
+        "24 hours defrost in chiller then 48 hours.",
+        "12 hours defrost in chiller then 36 hours."
+      ]
+    },
+    {
+      "category": "McDonald's",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What are the inner packages of french fries?",
+      "correct_answer": "6 x 2.5kg",
+      "incorrect_answers": [
+        "5 X 2.5kg",
+        "4 x 2.5kg",
+        "10 x 3kg"
+      ]
+    },
+    {
+      "category": "McDonald's",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What are the inner packages of twisty fries?",
+      "correct_answer": "4 X 2.5kg",
+      "incorrect_answers": [
+        "7 X 2.5kg",
+        "3 x 2kg",
+        "5 X 2.5kg"
+      ]
+    },
+    {
+      "category": "McDonald's",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What are the inner packages of shortening?",
+      "correct_answer": "2 x 10L",
+      "incorrect_answers": [
+        "3 X 10L",
+        "1 X 20L",
+        "2 X 5L"
+      ]
+    },
+    {
+      "category": "McDonald's",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What is the minimum shelf life on delivery for french fries?",
+      "correct_answer": "2 months",
+      "incorrect_answers": [
+        "3 months",
+        "4 months",
+        "6 months"
+      ]
+    },
+    {
+      "category": "McDonald's",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What is the minimum shelf life on delivery for twisty fries?",
+      "correct_answer": "6 months",
+      "incorrect_answers": [
+        "5 months",
+        "7 months",
+        "4 months"
+      ]
+    },
+    {
+      "category": "McDonald's",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What is the minimum shelf life on delivery for shortening?",
+      "correct_answer": "4 months",
+      "incorrect_answers": [
+        "2 months",
+        "5 months",
+        "8 months"
+      ]
+    },
+    {
+      "category": "McDonald's",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What is the tempering of donuts?",
+      "correct_answer": "24 hours included 3 hours defrosting.",
+      "incorrect_answers": [
+        "24 hours included 2 hours defrosting.",
+        "48 hours included 3 hours defrosting.",
+        "36 hours included 1 hour warm up."
+      ]
+    },
+    {
+      "category": "McDonald's",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What are the inner packages for donuts?",
+      "correct_answer": "3 x 24",
+      "incorrect_answers": [
+        "3 x 12",
+        "2 x 24",
+        "2 x 48"
+      ]
+    },
+    {
+      "category": "McDonald's",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What is the minimum shelf life on delivery for donuts?",
+      "correct_answer": "90 days",
+      "incorrect_answers": [
+        "72 days",
+        "80 days",
+        "42 days"
+      ]
+    },
+    {
+      "category": "McDonald's",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What is the minimum shelf life on delivery for apple pies?",
+      "correct_answer": "42 days",
+      "incorrect_answers": [
+        "90 days",
+        "45 days",
+        "30 days"
+      ]
+    },
+    {
+      "category": "McDonald's",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What is the tempering for desserts?",
+      "correct_answer": "5 days unopened included 2 hours defrost.",
+      "incorrect_answers": [
+        "3 days unopened included 2 hours defrost.",
+        "5 days unopened included 3 hours defrost.",
+        "2 days unopened included 1 hour defrost."
+      ]
+    },
+    {
+      "category": "McDonald's",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What is the minimum shelf life on delivery for desserts?",
+      "correct_answer": "90 days",
+      "incorrect_answers": [
+        "80 days",
+        "20 days",
+        "75 days"
+      ]
+    },
+    {
+      "category": "McDonald's",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What are the inner packages for apple pies?",
+      "correct_answer": "7 x20",
+      "incorrect_answers": [
+        "9 x 20",
+        "10 x 20",
+        "3 x 24"
+      ]
+    },
+    {
+      "category": "McDonald's",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What are the inner packages of sweet muffins?",
+      "correct_answer": "56",
+      "incorrect_answers": [
+        "48",
+        "140",
+        "72"
+      ]
+    },
+    {
+      "category": "McDonald's",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What are the inner packages for cookies?",
+      "correct_answer": "48",
+      "incorrect_answers": [
+        "74",
+        "56",
+        "38"
+      ]
+    },
+    {
+      "category": "McDonald's",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What is the draw temperature of cold drinks?",
+      "correct_answer": "0.1-4°C",
+      "incorrect_answers": [
+        "1-4°C",
+        "2-4°C",
+        "0.1-2°C"
+      ]
+    },
+    {
+      "category": "McDonald's",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What is the size of small cold drink?",
+      "correct_answer": "250mls",
+      "incorrect_answers": [
+        "200mls",
+        "300mls",
+        "325mls"
+      ]
+    },
+    {
+      "category": "McDonald's",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What is the size of medium cold drink?",
+      "correct_answer": "400mls",
+      "incorrect_answers": [
+        "500mls",
+        "250mls",
+        "425mls"
+      ]
+    },
+    {
+      "category": "McDonald's",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What is the size of large drink?",
+      "correct_answer": "500mls",
+      "incorrect_answers": [
+        "425mls",
+        "325mls",
+        "450mls"
+      ]
+    },
+    {
+      "category": "McDonald's",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What is the size of medium frappe drink?",
+      "correct_answer": "325mls",
+      "incorrect_answers": [
+        "425mls",
+        "400mls",
+        "250mls"
+      ]
+    },
+    {
+      "category": "McDonald's",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What is the size of large frappe drink?",
+      "correct_answer": "425mls",
+      "incorrect_answers": [
+        "300mls",
+        "450mls",
+        "500mls"
+      ]
+    }
+	]
+}
