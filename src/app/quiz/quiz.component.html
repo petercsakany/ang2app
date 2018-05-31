@@ -7,7 +7,9 @@
           <optgroup>
             <option value="-1">No Specific Category</option>
             <option *ngFor="let cat of categories" [value]="cat.id">{{cat.name}}</option>
-            <option value="666">MCD Test</option>
+            <option value="666">MCD Test part 1</option>
+            <option value="667">MCD Test part 2</option>
+            <option value="668">MCD Test part 3</option>
           </optgroup>
         </select>
         <label class="control-label" for="select">Total number of Questions: {{selectedCtgTotQNum}}</label>

@@ -38,6 +38,7 @@ export class QuestionComponent implements OnInit {
       this.correctAnswer = this.currentQuestion.correctAnswer;
       this.answers.forEach(answer => {
         this.renderer.removeClass(answer.nativeElement, 'list-group-item-success');
+        this.renderer.removeClass(answer.nativeElement, 'list-group-item-danger');
         answer.nativeElement.disabled = false;
       });
     } else {

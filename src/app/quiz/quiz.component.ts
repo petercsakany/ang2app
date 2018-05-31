@@ -54,8 +54,20 @@ export class QuizComponent implements OnInit {
       this.ErrorMsg = null;
     } else if (selectedCategory.value === '666') {
       this.anyCategory = false;
-      this.selectedCtgTotQNum = 60;
-      this.selectedCtgMaxQNum = 60;
+      this.selectedCtgTotQNum = 59;
+      this.selectedCtgMaxQNum = 59;
+      this.numOfQts = this.selectedCtgMaxQNum;
+      this.ErrorMsg = null;
+    } else if (selectedCategory.value === '667') {
+      this.anyCategory = false;
+      this.selectedCtgTotQNum = 25;
+      this.selectedCtgMaxQNum = 25;
+      this.numOfQts = this.selectedCtgMaxQNum;
+      this.ErrorMsg = null;
+    } else if (selectedCategory.value === '668') {
+      this.anyCategory = false;
+      this.selectedCtgTotQNum = 21;
+      this.selectedCtgMaxQNum = 21;
       this.numOfQts = this.selectedCtgMaxQNum;
       this.ErrorMsg = null;
     } else {
@@ -87,7 +99,16 @@ export class QuizComponent implements OnInit {
     if (this.numOfQts > this.selectedCtgMaxQNum || this.numOfQts <= 0) {
       this.ErrorMsg = 'Number of questions cannot be less than 1 or more than the given limit!';
     } else {
-      let url = 'assets/mcd2.json';
+      let url = '';
+      if (this.selectedCtgId.toString() === '666') {
+        url = 'assets/mcd.json';
+      }
+      if (this.selectedCtgId.toString() === '667') {
+        url = 'assets/mcd2.json';
+      }
+      if (this.selectedCtgId.toString() === '668') {
+        url = 'assets/mcd3.json';
+      }
       if (this.selectedCtgId < 666) {
         url = 'https://opentdb.com/api.php?';
         url += `amount=${this.numOfQts}`;

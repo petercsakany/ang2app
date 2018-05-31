@@ -1,0 +1,713 @@
+{
+	"response_code": 0,
+	"results": [
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "How many SoC's we've all together?",
+			"correct_answer": "28",
+			"incorrect_answers": [
+				"14",
+				"25",
+				"18"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "How many initial SoC's we have?",
+			"correct_answer": "14",
+			"incorrect_answers": [
+				"13",
+				"28",
+				"17"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "How many additional SoC's we have?",
+			"correct_answer": "14",
+			"incorrect_answers": [
+				"11",
+				"5",
+				"28"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "How much percent is required for Health & Safety SoC?",
+			"correct_answer": "100 %",
+			"incorrect_answers": [
+				"97%",
+				"80%",
+				"75%"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What are the four steps of training?",
+			"correct_answer": "Prepare, Present, Try out, Follow up",
+			"incorrect_answers": [
+				"Prepare, Practice, Precise, Check out",
+				"Present, Try out, Learn, Follow up",
+				"Prepare, Present, Try on, Follow down"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the temperature of grill's upper platen?",
+			"correct_answer": "218°C",
+			"incorrect_answers": [
+				"177°C",
+				"216°C",
+				"70°C"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the temperature of grill's lower platen?",
+			"correct_answer": "177°C",
+			"incorrect_answers": [
+				"75°C",
+				"167°C",
+				"218°C"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the internal temperature range for meat patties?",
+			"correct_answer": "70-75°C",
+			"incorrect_answers": [
+				"72-83°C",
+				"177-218°C",
+				"70-95°C"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the minimum internal temperature for meat patties?",
+			"correct_answer": "70°C",
+			"incorrect_answers": [
+				"72°C",
+				"75°C",
+				"63°C"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the temperature range of grill's top platen?",
+			"correct_answer": "210-230°C",
+			"incorrect_answers": [
+				"218-230°C",
+				"177-218°C",
+				"130-175°C"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the temperature range of grill's lower platen?",
+			"correct_answer": "174-194°C",
+			"incorrect_answers": [
+				"170-218°C",
+				"100-150°C",
+				"177-194°C"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the temperature of the production bin?",
+			"correct_answer": "63-66°C",
+			"incorrect_answers": [
+				"60-65°C",
+				"63°C",
+				"66-70°C"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the warm up time of the production bin?",
+			"correct_answer": "30 min",
+			"incorrect_answers": [
+				"40 min",
+				"25 min",
+				"15 min"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the holding time of production bin?",
+			"correct_answer": "10 min",
+			"incorrect_answers": [
+				"15 min",
+				"20 min",
+				"5 min"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the temperature of universal toaster?",
+			"correct_answer": "216±3°C",
+			"incorrect_answers": [
+				"177±5°C",
+				"215°C",
+				"218±3°C"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the toasting cycle of universal toaster?",
+			"correct_answer": "35±1 sec",
+			"incorrect_answers": [
+				"37±1 sec",
+				"216±3 sec",
+				"35±3 sec"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the warm up time of universal toaster?",
+			"correct_answer": "30 min",
+			"incorrect_answers": [
+				"15 min",
+				"20 min",
+				"45 min"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the temperature of vertical toaster?",
+			"correct_answer": "294°C",
+			"incorrect_answers": [
+				"218°C",
+				"194°C",
+				"292°C"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the toasting cycle of vertical toaster?",
+			"correct_answer": "17 sec",
+			"incorrect_answers": [
+				"37 sec",
+				"15 sec",
+				"24 sec"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the warm up time of vertical toaster?",
+			"correct_answer": "30 min",
+			"incorrect_answers": [
+				"35 min",
+				"20 min",
+				"10 min"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the heel height of Regular bun?",
+			"correct_answer": "16mm",
+			"incorrect_answers": [
+				"18mm",
+				"10mm",
+				"26mm"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the heel height of Big Mac bun?",
+			"correct_answer": "16mm",
+			"incorrect_answers": [
+				"18mm",
+				"10mm",
+				"26mm"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the heel height of Quarter bun?",
+			"correct_answer": "16mm",
+			"incorrect_answers": [
+				"18mm",
+				"10mm",
+				"26mm"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the diameter of Regular bun?",
+			"correct_answer": "9.5-9.8cm",
+			"incorrect_answers": [
+				"9.6-9.8cm",
+				"8.9-9.6cm",
+				"5.2-7.3cm"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the diameter of Big Mac bun?",
+			"correct_answer": "9.5-9.8cm",
+			"incorrect_answers": [
+				"9.6-9.8cm",
+				"8.9-9.6cm",
+				"5.2-7.3cm"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the diameter of Quarter bun?",
+			"correct_answer": "9.5-9.8cm",
+			"incorrect_answers": [
+				"9.6-9.8cm",
+				"8.9-9.6cm",
+				"5.2-7.3cm"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the overall height of Regular bun?",
+			"correct_answer": "3.8-4.4cm",
+			"incorrect_answers": [
+				"3.4-4.4cm",
+				"4.2-5.1cm",
+				"3-4cm"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the overall height of Big Mac bun?",
+			"correct_answer": "5.7-6.4cm",
+			"incorrect_answers": [
+				"5.4-6.4cm",
+				"4.2-5.1cm",
+				"5-7cm"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the overall height of Quarter bun?",
+			"correct_answer": "3.8-4.4cm",
+			"incorrect_answers": [
+				"3.4-4.4cm",
+				"4.2-5.1cm",
+				"3-4cm"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the four step complaint recovery?",
+			"correct_answer": "Listen Apologize Solve the problem Thank you",
+			"incorrect_answers": [
+				"Listen Ask questions Sympathise Fix it",
+				"Learn Apologize Save Try",
+				"Listen Apologize Solve the riddle Thank me"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the minimum shelf life on delivery for fresh buns?",
+			"correct_answer": "4 days",
+			"incorrect_answers": [
+				"2 days",
+				"10 days",
+				"5 days"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the minimum shelf life on delivery for frozen buns?",
+			"correct_answer": "28 days",
+			"incorrect_answers": [
+				"26 days",
+				"30 days",
+				"48 days"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the secondary shelf life for frozen buns?",
+			"correct_answer": "48 hours (included 2 hours defrost)",
+			"incorrect_answers": [
+				"72 hours (included 2 hours defrost)",
+				"24 hours (included 2 hours defrost)",
+				"48 hours (included 4 hours defrost)"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the temperature range for freezers?",
+			"correct_answer": "<= -18°C",
+			"incorrect_answers": [
+				"< -23°C",
+				"> -5°C",
+				"-18°C"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the temperature range for chillers?",
+			"correct_answer": "2-4°C",
+			"incorrect_answers": [
+				"1-4°C",
+				"2-7°C",
+				"0-5°C"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the secondary shelf life of salads in chiller?",
+			"correct_answer": "8 hours",
+			"incorrect_answers": [
+				"6 hours",
+				"4 hours",
+				"12 hours"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the tempering time for tube sauces?",
+			"correct_answer": "48 hours included 5 hours warmp up.",
+			"incorrect_answers": [
+				"48 hours included 2 hours warm up.",
+				"24 hours included 2 hours warm up.",
+				"72 hours included 5 hours warm up."
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the tempering time for vegetables/bacon?",
+			"correct_answer": "3 hours on grill area included 1 hour warm up.",
+			"incorrect_answers": [
+				"2 hours on grill area included 1 hour warm up.",
+				"4 hours on grill area included 2 hour warm up.",
+				"3 hours on grill area included 2 hour warm up."
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the freeze down time of grillside freezers?",
+			"correct_answer": "45 min",
+			"incorrect_answers": [
+				"30 min",
+				"25 min",
+				"10 min"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the warm up time of fryers?",
+			"correct_answer": "45 min",
+			"incorrect_answers": [
+				"30 min",
+				"25 min",
+				"15 min"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the warm up time of UHC?",
+			"correct_answer": "25 min",
+			"incorrect_answers": [
+				"10 min",
+				"35 min",
+				"45 min"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the warm up time of grills?",
+			"correct_answer": "20 min",
+			"incorrect_answers": [
+				"45 min",
+				"30 min",
+				"15 min"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the warm up time of Muffin toaster?",
+			"correct_answer": "15 min",
+			"incorrect_answers": [
+				"20 min",
+				"30 min",
+				"45 min"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the warm up time of Steamer?",
+			"correct_answer": "15 min",
+			"incorrect_answers": [
+				"35 min",
+				"20 min",
+				"25 min"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the secondary shelf life of tortilla?",
+			"correct_answer": "Unponeded: 4,5 days, opened: 1,5 days",
+			"incorrect_answers": [
+				"Unponeded: 6 days, opened: 3 days",
+				"Unponeded: 2,5 days, opened: 1 day",
+				"Unponeded: 4,5 days, opened: 2,5 days"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the cooking temperature of chicken side fryers?",
+			"correct_answer": "182°C",
+			"incorrect_answers": [
+				"168°C",
+				"172°C",
+				"218°C"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the cooking temperature of fry station fryers?",
+			"correct_answer": "168°C",
+			"incorrect_answers": [
+				"178°C",
+				"182°C",
+				"177°C"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the steaming temperature of bacon?",
+			"correct_answer": "176°C",
+			"incorrect_answers": [
+				"178°C",
+				"186°C",
+				"152°C"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the steaming temperature of filet fish?",
+			"correct_answer": "174°C",
+			"incorrect_answers": [
+				"176°C",
+				"177°C",
+				"214°C"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the cooking time of fries?",
+			"correct_answer": "180 sec",
+			"incorrect_answers": [
+				"160 sec",
+				"168 sec",
+				"120 sec"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the temperature of UHC?",
+			"correct_answer": "93°C",
+			"incorrect_answers": [
+				"79°C",
+				"95°C",
+				"83°C"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the temperature of UHC for breakfast?",
+			"correct_answer": "79°C",
+			"incorrect_answers": [
+				"63°C",
+				"95°C",
+				"77°C"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the cooking time of chicken patties and nuggets?",
+			"correct_answer": "195 sec",
+			"incorrect_answers": [
+				"180 sec",
+				"197 sec",
+				"174 sec"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the cooking time of legend patties and selects?",
+			"correct_answer": "270 sec",
+			"incorrect_answers": [
+				"250 sec",
+				"120 sec",
+				"230 sec"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the draw temperature of shake machine?",
+			"correct_answer": "-3.2°C to -3.7°C",
+			"incorrect_answers": [
+				"-3.4°C to -3.7°C",
+				"-3.2°C to -3.8°C",
+				"-3.0°C to -3.9°C"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the draw temperature of sundae machine?",
+			"correct_answer": "-8°C to -9°C",
+			"incorrect_answers": [
+				"-8°C to -10°C",
+				"-2°C to -4°C",
+				"-5°C to -8°C"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the weight of a sundae (without topping)?",
+			"correct_answer": "141g",
+			"incorrect_answers": [
+				"144g",
+				"155g",
+				"131g"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the weight of a mcflurry (without topping)?",
+			"correct_answer": "155g",
+			"incorrect_answers": [
+				"144g",
+				"151g",
+				"118g"
+			]
+		},
+		{
+			"category": "McDonald's",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the cooking time apple pies?",
+			"correct_answer": "355 sec",
+			"incorrect_answers": [
+				"255 sec",
+				"300 sec",
+				"360 sec"
+			]
+		}
+	]
+}

@@ -1,0 +1,257 @@
+{
+	"response_code": 0,
+	"results": [
+      {
+        "category": "McDonald's",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "What are the elements of food-safety pre-shift checklist?",
+        "correct_answer": "People, Products, Equipment, Procedures",
+        "incorrect_answers": [
+          "People, Productivity, Equipment, Products",
+          "Person, Products, Equipment, Procedural environment",
+          "People, Products, Equality, Procedures"
+        ]
+      },
+      {
+        "category": "McDonald's",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "What is the temperature of hashbrown?",
+        "correct_answer": "175 °C",
+        "incorrect_answers": [
+          "182 °C",
+          "168 °C",
+          "174 °C"
+        ]
+      },
+      {
+        "category": "McDonald's",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "What are the inner packages of breakfast ham?",
+        "correct_answer": "18 X 240g",
+        "incorrect_answers": [
+          "20 X 240g",
+          "18 X 250g",
+          "15 X 200g"
+        ]
+      },
+      {
+        "category": "McDonald's",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "What is the minimum shelf life on delivery for breakfast ham?",
+        "correct_answer": "28 days",
+        "incorrect_answers": [
+          "30 days",
+          "25 days",
+          "42 days"
+        ]
+      },
+      {
+        "category": "McDonald's",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "What is the secondary shelf life of breakfast ham?",
+        "correct_answer": "48 hours in chiller including 6 hours defrost.",
+        "incorrect_answers": [
+          "48 hours in chiller including 4 hours defrost.",
+          "24 hours in chiller including 2 hours defrost.",
+          "36 hours in chiller including 6 hours defrost."
+        ]
+      },
+      {
+        "category": "McDonald's",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "What is the unit/case attribute of porridge?",
+        "correct_answer": "100 X 30g",
+        "incorrect_answers": [
+          "100 X 50g",
+          "30 X 100g",
+          "90 X 30g"
+        ]
+      },
+      {
+        "category": "McDonald's",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "What is the minimum shelf life on delivery for porridge?",
+        "correct_answer": "150 days",
+        "incorrect_answers": [
+          "130 days",
+          "200 days",
+          "50 days"
+        ]
+      },
+      {
+        "category": "McDonald's",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "What are the inner packages of bacon roll?",
+        "correct_answer": "8 X 6",
+        "incorrect_answers": [
+          "8 X 7",
+          "10 X 6",
+          "6 X 5"
+        ]
+      },
+      {
+        "category": "McDonald's",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "What is the minimum shelf life on delivery for bacon roll?",
+        "correct_answer": "90 days",
+        "incorrect_answers": [
+          "50 days",
+          "70 days",
+          "30 days"
+        ]
+      },
+      {
+        "category": "McDonald's",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "What is the tempering of bacon roll?",
+        "correct_answer": "48 hours included 2 hours defrost.",
+        "incorrect_answers": [
+          "48 hours included 1 hour defrost.",
+          "24 hours included 2 hours defrost.",
+          "48 hours included 4 hours defrost."
+        ]
+      },
+      {
+        "category": "McDonald's",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "What are the inner packages of brown sauce?",
+        "correct_answer": "18 X 300g",
+        "incorrect_answers": [
+          "16 X 300g",
+          "18 X 250g",
+          "100 X 30g"
+        ]
+      },
+      {
+        "category": "McDonald's",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "What is the minimum shelf life for brown sauce?",
+        "correct_answer": "50 days",
+        "incorrect_answers": [
+          "90 days",
+          "42 days",
+          "25 days"
+        ]
+      },
+      {
+        "category": "McDonald's",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "What are the inner packages of ketchup?",
+        "correct_answer": "2 X 10lts",
+        "incorrect_answers": [
+          "2 X 15lts",
+          "3 X 10lts",
+          "20lt"
+        ]
+      },
+      {
+        "category": "McDonald's",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "What is the minimum shelf life on delivery for ketchup?",
+        "correct_answer": "30",
+        "incorrect_answers": [
+          "50",
+          "42",
+          "93"
+        ]
+      },
+      {
+        "category": "McDonald's",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "What is the cooking temperature of poached eggs?",
+        "correct_answer": "129",
+        "incorrect_answers": [
+          "182",
+          "168",
+          "175"
+        ]
+      },
+      {
+        "category": "McDonald's",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "What is the cooking time for poached eggs?",
+        "correct_answer": "150 sec",
+        "incorrect_answers": [
+          "155 sec",
+          "270 sec",
+          "180 sec"
+        ]
+      },
+      {
+        "category": "McDonald's",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "What are the inner packages of hashbrown?",
+        "correct_answer": "8 X 25",
+        "incorrect_answers": [
+          "8 X 50",
+          "7 X 20",
+          "10 X 30"
+        ]
+      },
+      {
+        "category": "McDonald's",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "What is the minimum shelf life on delivery for hashbrown?",
+        "correct_answer": "60 days",
+        "incorrect_answers": [
+          "90 days",
+          "120 days",
+          "50 days"
+        ]
+      },
+      {
+        "category": "McDonald's",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "What is the tempering for english muffins?",
+        "correct_answer": "48 hours including 2 hours defrost.",
+        "incorrect_answers": [
+          "48 hours including 4 hours defrost.",
+          "24 hours including 2 hours defrost.",
+          "24 hours including 1 hour defrost."
+        ]
+      },
+      {
+        "category": "McDonald's",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "What is the tempering of toasties flatbread?",
+        "correct_answer": "48 hours including 4 hours defrost.",
+        "incorrect_answers": [
+          "48 hours including 6 hours defrost.",
+          "36 hours including 4 hours defrost.",
+          "24 hours including 2 hours defrost."
+        ]
+      },
+    {
+      "category": "McDonald's",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "What is the tempering of pancakes?",
+      "correct_answer": "96 hours in chiller including 12 hours defrost.",
+      "incorrect_answers": [
+        "86 hours in chillers including 12 hours defrost.",
+        "72 hours in chillers including 6 hours defrost.",
+        "96 hours in chillers including 8 hours defrost."
+      ]
+    }
+	]
+}
